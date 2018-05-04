@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+body{
+margin: 0px;
+}
+li{
+width: 200px;
+height: 50px;
+list-style-type: none;
+margin-bottom: 10px;
+background-color: brown; 
+display: block;
+}
+</style>
+<script src="js/myjs.js"></script> 
+
+</head>
+<body>
+<h1>在输入框输入数字控制横条运动</h1>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<input type="text" id="input" value=" "/> <input type="button" onclick="submit()"value="提交"/>
+<script>
+
+	var myli=document.getElementsByTagName("li");
+    function submit(){
+ 	var inpu=document.getElementById("input");
+ 	 for(var i=0;i<inpu.value.substr(1).length;i++){
+ 	 	  var a=inpu.value.substr(1)[i];
+             
+         var c=startMove(myli[a-1],{width:500,height:400},300,function(){startMove(myli[a-1],{height:50,width:200});}); //运动数据，运动函数有obj,json,time(运动间隔)，链接函数
+         
+       
+ 	 }
+ 	
+ }
+
+</script>
+</body>
+</html>
